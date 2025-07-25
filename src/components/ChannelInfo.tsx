@@ -33,7 +33,6 @@ const ChannelInfo = () => {
         <div className="flex items-center bg-secondary rounded-full">
           <Button variant="ghost" size="sm" className="rounded-l-full rounded-r-none hover:bg-accent">
             <ThumbsUp className="w-4 h-4 mr-2" />
-            <span className="text-sm">👍</span>
           </Button>
           <div className="w-px h-6 bg-border"></div>
           <Button variant="ghost" size="sm" className="rounded-r-full rounded-l-none hover:bg-accent">
