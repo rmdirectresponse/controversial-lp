@@ -9,9 +9,6 @@ const YouTubeHeader = () => {
           <button className="p-1.5 rounded-full hover:bg-accent transition-colors flex-shrink-0 lg:p-2">
             <Menu className="w-5 h-5 lg:w-6 lg:h-6" />
           </button>
-          <div className="flex items-center gap-1 min-w-0">
-            <span className="text-lg font-medium text-white whitespace-nowrap lg:text-xl">YouTube</span>
-          </div>
         </div>
 
         {/* Center section - Search */}
