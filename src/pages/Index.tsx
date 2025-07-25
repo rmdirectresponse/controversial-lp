@@ -22,6 +22,9 @@ const Index = () => {
             <LiveChat />
           </div>
         </div>
+        
+        {/* Espaço no final da página */}
+        <div className="h-16 lg:h-24"></div>
       </main>
     </div>
   );
