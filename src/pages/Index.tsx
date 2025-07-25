@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import YouTubeHeader from "@/components/YouTubeHeader";
+import VideoPlayer from "@/components/VideoPlayer";
+import ChannelInfo from "@/components/ChannelInfo";
+import LiveChat from "@/components/LiveChat";
+import EmotionalMessage from "@/components/EmotionalMessage";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <YouTubeHeader />
+      
+      <main className="youtube-container py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Main content area */}
+          <div className="lg:col-span-2 space-y-4">
+            <VideoPlayer />
+            <ChannelInfo />
+            <EmotionalMessage />
+          </div>
+          
+          {/* Sidebar */}
+          <div className="lg:col-span-1">
+            <LiveChat />
+          </div>
+        </div>
+      </main>
     </div>
   );
 };
