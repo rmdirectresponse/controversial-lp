@@ -10,12 +10,7 @@ const YouTubeHeader = () => {
             <Menu className="w-6 h-6" />
           </button>
           <div className="flex items-center gap-1">
-            <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-              <div className="w-5 h-4 bg-white" style={{
-                clipPath: "polygon(0 0, 100% 50%, 0 100%)"
-              }} />
-            </div>
-            <span className="text-xl font-medium text-white ml-1">YouTube</span>
+            <span className="text-xl font-medium text-white">YouTube</span>
           </div>
         </div>
 
@@ -24,7 +19,7 @@ const YouTubeHeader = () => {
           <div className="flex flex-1 max-w-xl">
             <input
               type="text"
-              placeholder="Pesquisar"
+              placeholder="Buscar"
               className="flex-1 bg-background border border-border rounded-l-full px-4 py-2 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary"
             />
             <button className="bg-secondary border border-l-0 border-border rounded-r-full px-6 py-2 hover:bg-accent transition-colors">

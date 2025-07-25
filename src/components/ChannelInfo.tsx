@@ -7,7 +7,7 @@ const ChannelInfo = () => {
     <div className="space-y-4">
       {/* Video title */}
       <h1 className="text-xl font-normal text-foreground">
-        This Cactus Recipe Reverses Your Type 2 Diabetes in 7 Days
+        Esta Receta de Cactus Revierte Tu Diabetes Tipo 2 en 7 Días
       </h1>
 
       {/* Channel info and subscribe */}
@@ -20,16 +20,16 @@ const ChannelInfo = () => {
           />
           <div>
             <div className="font-medium text-foreground">Dr. Angela Torres</div>
-            <div className="text-sm text-muted-foreground">1.7M inscritos</div>
+            <div className="text-sm text-muted-foreground">1.7M suscriptores</div>
           </div>
         </div>
         <Button variant="youtube" size="youtube" className="font-medium">
-          Subscribe
+          Suscribirse
         </Button>
       </div>
 
       {/* Action buttons */}
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center space-x-2 flex-wrap gap-2">
         <div className="flex items-center bg-secondary rounded-full">
           <Button variant="ghost" size="sm" className="rounded-l-full rounded-r-none hover:bg-accent">
             <ThumbsUp className="w-4 h-4 mr-2" />
@@ -43,12 +43,12 @@ const ChannelInfo = () => {
         
         <Button variant="youtube-secondary" size="youtube" className="font-normal">
           <Share className="w-4 h-4 mr-2" />
-          To share
+          Compartir
         </Button>
         
         <Button variant="youtube-secondary" size="youtube" className="font-normal">
           <Bookmark className="w-4 h-4 mr-2" />
-          Save
+          Guardar
         </Button>
       </div>
     </div>

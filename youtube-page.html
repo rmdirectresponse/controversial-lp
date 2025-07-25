@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This Cactus Recipe Reverses Your Type 2 Diabetes in 7 Days - YouTube</title>
+    <title>Esta Receta de Cactus Revierte Tu Diabetes Tipo 2 en 7 Días - YouTube</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -19,6 +19,7 @@
             background-color: #0f0f0f;
             color: #ffffff;
             line-height: 1.5;
+            overflow-x: hidden;
         }
 
         /* Header styles */
@@ -65,31 +66,10 @@
             gap: 4px;
         }
 
-        .play-icon {
-            width: 32px;
-            height: 32px;
-            background: #ff0000;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .play-icon::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 12px solid white;
-            border-top: 8px solid transparent;
-            border-bottom: 8px solid transparent;
-            margin-left: 3px;
-        }
-
         .logo-text {
             font-size: 20px;
             font-weight: 500;
             color: white;
-            margin-left: 4px;
         }
 
         .search-container {
@@ -115,6 +95,7 @@
             color: white;
             font-size: 16px;
             outline: none;
+            min-width: 0;
         }
 
         .search-input:focus {
@@ -130,6 +111,7 @@
             color: white;
             cursor: pointer;
             transition: background-color 0.2s;
+            flex-shrink: 0;
         }
 
         .search-button:hover {
@@ -150,6 +132,7 @@
             border-radius: 50%;
             cursor: pointer;
             transition: background-color 0.2s;
+            flex-shrink: 0;
         }
 
         .icon-button:hover {
@@ -160,9 +143,9 @@
         .main-container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 24px;
+            padding: 24px 16px;
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1fr;
             gap: 24px;
         }
 
@@ -174,6 +157,7 @@
             border-radius: 12px;
             overflow: hidden;
             margin-bottom: 16px;
+            width: 100%;
         }
 
         .video-background {
@@ -211,6 +195,7 @@
             backdrop-filter: blur(4px);
             border-radius: 4px;
             padding: 8px 24px;
+            white-space: nowrap;
         }
 
         .click-text {
@@ -244,6 +229,7 @@
             justify-content: center;
             cursor: pointer;
             transition: background-color 0.2s;
+            border: none;
         }
 
         .play-button:hover {
@@ -285,12 +271,16 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
         .channel-details {
             display: flex;
             align-items: center;
             gap: 12px;
+            flex: 1;
+            min-width: 0;
         }
 
         .avatar {
@@ -298,11 +288,13 @@
             height: 40px;
             border-radius: 50%;
             background: #666;
+            flex-shrink: 0;
         }
 
         .channel-text {
             display: flex;
             flex-direction: column;
+            min-width: 0;
         }
 
         .channel-name {
@@ -324,6 +316,7 @@
             font-weight: 500;
             cursor: pointer;
             transition: background-color 0.2s;
+            flex-shrink: 0;
         }
 
         .subscribe-button:hover {
@@ -335,6 +328,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-wrap: wrap;
         }
 
         .like-dislike {
@@ -379,6 +373,7 @@
             align-items: center;
             gap: 8px;
             font-size: 14px;
+            flex-shrink: 0;
         }
 
         .action-button:hover {
@@ -391,6 +386,7 @@
             border: 1px solid #333;
             border-radius: 8px;
             overflow: hidden;
+            width: 100%;
         }
 
         .chat-header {
@@ -447,6 +443,7 @@
 
         .comment-content {
             flex: 1;
+            min-width: 0;
         }
 
         .comment-user {
@@ -460,6 +457,7 @@
             color: white;
             font-size: 14px;
             line-height: 1.4;
+            word-wrap: break-word;
         }
 
         .chat-input {
@@ -485,36 +483,106 @@
             color: #aaa;
             font-size: 14px;
             outline: none;
+            min-width: 0;
         }
 
         .chat-counter {
             font-size: 12px;
             color: #aaa;
+            flex-shrink: 0;
         }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
+        /* Responsive design improvements */
+        @media (min-width: 1024px) {
             .main-container {
-                grid-template-columns: 1fr;
-                padding: 16px;
+                grid-template-columns: 2fr 1fr;
+                padding: 24px;
             }
-            
+        }
+
+        @media (max-width: 1024px) {
             .search-container {
-                display: none;
-            }
-            
-            .header-content {
-                padding: 0 16px;
+                max-width: 300px;
+                margin: 0 16px;
             }
         }
 
         @media (max-width: 768px) {
+            .header-content {
+                padding: 0 8px;
+            }
+
+            .search-container {
+                display: none;
+            }
+
             .header-right .icon-button:not(:last-child) {
                 display: none;
             }
-            
+
+            .main-container {
+                padding: 16px 8px;
+                gap: 16px;
+            }
+
+            .video-title {
+                font-size: 18px;
+            }
+
+            .channel-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             .action-buttons {
-                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+
+            .click-to-listen {
+                padding: 6px 12px;
+            }
+
+            .click-text {
+                font-size: 14px;
+            }
+
+            .doctor-image {
+                width: 60px;
+                height: 80px;
+                bottom: 16px;
+                left: 16px;
+            }
+
+            .cbs-logo {
+                top: 8px;
+                padding: 4px 8px;
+            }
+
+            .cbs-text {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 12px 4px;
+            }
+
+            .action-buttons {
+                gap: 4px;
+            }
+
+            .action-button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .like-button, .dislike-button {
+                padding: 6px 12px;
+            }
+
+            .video-title {
+                font-size: 16px;
             }
         }
     </style>
@@ -533,7 +601,6 @@
                     </svg>
                 </button>
                 <div class="youtube-logo">
-                    <div class="play-icon"></div>
                     <span class="logo-text">YouTube</span>
                 </div>
             </div>
@@ -541,7 +608,7 @@
             <!-- Center section -->
             <div class="search-container">
                 <div class="search-box">
-                    <input type="text" class="search-input" placeholder="Pesquisar">
+                    <input type="text" class="search-input" placeholder="Buscar">
                     <button class="search-button">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="11" cy="11" r="8"></circle>
@@ -587,7 +654,7 @@
                     </div>
                     <div class="doctor-image"></div>
                     <div class="click-to-listen">
-                        <span class="click-text">Click To Listen</span>
+                        <span class="click-text">Haz Clic Para Escuchar</span>
                     </div>
                 </div>
                 <button class="play-button"></button>
@@ -595,18 +662,18 @@
             </div>
 
             <!-- Video title -->
-            <h1 class="video-title">This Cactus Recipe Reverses Your Type 2 Diabetes in 7 Days</h1>
+            <h1 class="video-title">Esta Receta de Cactus Revierte Tu Diabetes Tipo 2 en 7 Días</h1>
 
             <!-- Channel info -->
             <div class="channel-info">
                 <div class="channel-details">
                     <div class="avatar"></div>
                     <div class="channel-text">
-                        <div class="channel-name">Dr. Angela Torres</div>
-                        <div class="subscriber-count">1.7M inscritos</div>
+                        <div class="channel-name">Dra. Angela Torres</div>
+                        <div class="subscriber-count">1.7M suscriptores</div>
                     </div>
                 </div>
-                <button class="subscribe-button">Subscribe</button>
+                <button class="subscribe-button">Suscribirse</button>
             </div>
 
             <!-- Action buttons -->
@@ -636,14 +703,14 @@
                         <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
                         <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                     </svg>
-                    To share
+                    Compartir
                 </button>
                 
                 <button class="action-button">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                     </svg>
-                    Save
+                    Guardar
                 </button>
             </div>
         </div>
@@ -651,10 +718,10 @@
         <!-- Live chat -->
         <div class="live-chat">
             <div class="chat-header">
-                <h3 class="chat-title">Live Chat</h3>
+                <h3 class="chat-title">Chat en Vivo</h3>
                 <div class="chat-info">
                     <div class="live-indicator"></div>
-                    <span>Top Posts</span>
+                    <span>Principales</span>
                     <span style="margin-left: 16px;">👥 2.3K</span>
                 </div>
             </div>
@@ -664,7 +731,7 @@
                     <div class="comment-avatar">L</div>
                     <div class="comment-content">
                         <div class="comment-user">Linda M.</div>
-                        <div class="comment-text">Day 7 and my sugar dropped to 97. I honestly cried when I saw the meter. Thank you, Dr. Angela.</div>
+                        <div class="comment-text">Día 7 y mi azúcar bajó a 97. Honestamente lloré cuando vi el medidor. Gracias, Dra. Angela.</div>
                     </div>
                 </div>
 
@@ -672,7 +739,7 @@
                     <div class="comment-avatar">C</div>
                     <div class="comment-content">
                         <div class="comment-user">Carlos Reyes</div>
-                        <div class="comment-text">My dad has been on insulin for 12 years. After 2 weeks on this, his doctor said "I don't know what you're doing, but keep doing it."</div>
+                        <div class="comment-text">Mi papá ha estado usando insulina por 12 años. Después de 2 semanas con esto, su doctor dijo "No sé qué estás haciendo, pero sigue haciéndolo".</div>
                     </div>
                 </div>
 
@@ -680,7 +747,7 @@
                     <div class="comment-avatar">D</div>
                     <div class="comment-content">
                         <div class="comment-user">Deborah W.</div>
-                        <div class="comment-text">Didn't change my diet, didn't start exercising. Just started this recipe. My energy is coming back. This is real.</div>
+                        <div class="comment-text">No cambié mi dieta, no empecé a hacer ejercicio. Solo comencé esta receta. Mi energía está regresando. Esto es real.</div>
                     </div>
                 </div>
 
@@ -688,7 +755,7 @@
                     <div class="comment-avatar">S</div>
                     <div class="comment-content">
                         <div class="comment-user">Samantha R.</div>
-                        <div class="comment-text">I've seen a ton of diabetes "cures" online. This one hit different. Feels legit for the first time.</div>
+                        <div class="comment-text">He visto un montón de "curas" para diabetes en línea. Esta se sintió diferente. Se siente legítima por primera vez.</div>
                     </div>
                 </div>
 
@@ -696,7 +763,7 @@
                     <div class="comment-avatar">B</div>
                     <div class="comment-content">
                         <div class="comment-user">Ben H.</div>
-                        <div class="comment-text">Okay... I usually skip these long videos. But I watched every second of this. Something about her story just felt real.</div>
+                        <div class="comment-text">Bueno... usualmente me salto estos videos largos. Pero vi cada segundo de este. Algo sobre su historia se sintió real.</div>
                     </div>
                 </div>
 
@@ -704,14 +771,14 @@
                     <div class="comment-avatar">A</div>
                     <div class="comment-content">
                         <div class="comment-user">Amy Delgado</div>
-                        <div class="comment-text">Not gonna lie — I thought this was a scam at first. But I just made it. It's worth a shot. I just reversed my diabetes in less than 7 days...</div>
+                        <div class="comment-text">No voy a mentir — pensé que esto era una estafa al principio. Pero acabo de hacerlo. Vale la pena intentarlo. Acabo de revertir mi diabetes en menos de 7 días...</div>
                     </div>
                 </div>
             </div>
 
             <div class="chat-input">
                 <div class="chat-input-avatar"></div>
-                <input type="text" class="chat-input-field" placeholder="Click here..." disabled>
+                <input type="text" class="chat-input-field" placeholder="Haz clic aquí..." disabled>
                 <span class="chat-counter">0/200</span>
             </div>
         </div>

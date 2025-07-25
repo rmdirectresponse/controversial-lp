@@ -35,7 +35,7 @@ const VideoPlayer = () => {
         {/* "Click To Listen" overlay */}
         <div className="absolute bottom-1/3 left-1/2 transform -translate-x-1/2">
           <div className="bg-black/70 backdrop-blur-sm rounded px-6 py-2">
-            <span className="text-white font-medium text-lg">Click To Listen</span>
+            <span className="text-white font-medium text-lg">Haz Clic Para Escuchar</span>
           </div>
         </div>
       </div>
