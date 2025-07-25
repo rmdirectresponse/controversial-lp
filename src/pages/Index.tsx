@@ -2,7 +2,6 @@ import YouTubeHeader from "@/components/YouTubeHeader";
 import VideoPlayer from "@/components/VideoPlayer";
 import ChannelInfo from "@/components/ChannelInfo";
 import LiveChat from "@/components/LiveChat";
-import EmotionalMessage from "@/components/EmotionalMessage";
 
 const Index = () => {
   return (
@@ -15,7 +14,7 @@ const Index = () => {
           <div className="lg:col-span-2 space-y-4">
             <VideoPlayer />
             <ChannelInfo />
-            <EmotionalMessage />
+            
           </div>
           
           {/* Sidebar */}
