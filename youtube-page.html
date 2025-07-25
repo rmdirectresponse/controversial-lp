@@ -14,22 +14,30 @@
             box-sizing: border-box;
         }
 
+        html {
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Roboto', Arial, sans-serif;
             background-color: #0f0f0f;
             color: #ffffff;
             line-height: 1.5;
             overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
 
         /* Header styles */
         .youtube-header {
             background-color: #0f0f0f;
             border-bottom: 1px solid #333;
-            padding: 8px 16px;
+            padding: 8px 12px;
             position: sticky;
             top: 0;
             z-index: 50;
+            width: 100%;
+            overflow: hidden;
         }
 
         .header-content {
@@ -38,22 +46,32 @@
             justify-content: space-between;
             max-width: 1280px;
             margin: 0 auto;
+            width: 100%;
+            min-width: 0;
         }
 
         .header-left {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 12px;
+            flex-shrink: 0;
+            min-width: 0;
         }
 
         .menu-button {
             background: none;
             border: none;
             color: white;
-            padding: 8px;
+            padding: 6px;
             border-radius: 50%;
             cursor: pointer;
             transition: background-color 0.2s;
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .menu-button:hover {
@@ -64,26 +82,30 @@
             display: flex;
             align-items: center;
             gap: 4px;
+            min-width: 0;
         }
 
         .logo-text {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 500;
             color: white;
+            white-space: nowrap;
         }
 
         .search-container {
             display: flex;
             align-items: center;
-            max-width: 640px;
+            max-width: 600px;
             flex: 1;
-            margin: 0 32px;
+            margin: 0 20px;
+            min-width: 0;
         }
 
         .search-box {
             display: flex;
             flex: 1;
             max-width: 500px;
+            min-width: 0;
         }
 
         .search-input {
@@ -121,18 +143,25 @@
         .header-right {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 4px;
+            flex-shrink: 0;
+            min-width: 0;
         }
 
         .icon-button {
             background: none;
             border: none;
             color: white;
-            padding: 8px;
+            padding: 6px;
             border-radius: 50%;
             cursor: pointer;
             transition: background-color 0.2s;
             flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .icon-button:hover {
@@ -564,8 +593,42 @@
         }
 
         @media (max-width: 480px) {
+            .youtube-header {
+                padding: 8px 8px;
+            }
+
+            .header-content {
+                padding: 0;
+                gap: 8px;
+            }
+
+            .header-left {
+                gap: 8px;
+            }
+
+            .logo-text {
+                font-size: 16px;
+            }
+
+            .header-right {
+                gap: 2px;
+            }
+
+            .icon-button {
+                width: 32px;
+                height: 32px;
+                padding: 4px;
+            }
+
+            .menu-button {
+                width: 32px;
+                height: 32px;
+                padding: 4px;
+            }
+
             .main-container {
-                padding: 12px 4px;
+                padding: 12px 8px;
+                gap: 12px;
             }
 
             .action-buttons {
@@ -583,6 +646,60 @@
 
             .video-title {
                 font-size: 16px;
+            }
+
+            .channel-info {
+                gap: 8px;
+            }
+
+            .subscribe-button {
+                padding: 6px 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .youtube-header {
+                padding: 6px 4px;
+            }
+
+            .header-left {
+                gap: 6px;
+            }
+
+            .logo-text {
+                font-size: 14px;
+            }
+
+            .header-right .icon-button:nth-child(2) {
+                display: none;
+            }
+
+            .main-container {
+                padding: 8px 4px;
+            }
+
+            .action-button {
+                padding: 4px 8px;
+                font-size: 11px;
+            }
+
+            .like-button, .dislike-button {
+                padding: 4px 8px;
+                font-size: 12px;
+            }
+
+            .video-title {
+                font-size: 14px;
+                line-height: 1.2;
+            }
+
+            .channel-name {
+                font-size: 14px;
+            }
+
+            .subscriber-count {
+                font-size: 12px;
             }
         }
     </style>

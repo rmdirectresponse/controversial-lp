@@ -67,15 +67,25 @@
 
   body {
     @apply bg-background text-foreground font-roboto;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
   }
 }
 
 @layer utilities {
+  /* Mobile-first responsive utilities */
+  .header-mobile-safe {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
   /* YouTube-specific utilities */
   .youtube-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 16px;
   }
   
   .youtube-video-player {
@@ -84,6 +94,7 @@
     border-radius: 12px;
     overflow: hidden;
     position: relative;
+    width: 100%;
   }
   
   .youtube-play-button {
@@ -113,5 +124,12 @@
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
     margin-left: 4px;
+  }
+
+  /* Mobile responsive fixes */
+  @media (max-width: 768px) {
+    .youtube-container {
+      padding: 0 8px;
+    }
   }
 }
