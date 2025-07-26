@@ -24,6 +24,7 @@
     <script type="text/javascript">
       (function() {
         console.log("UTMify initialization starting...");
+        console.log("Current domain:", window.location.hostname);
         
         // Set pixel ID
         window.pixelId = "6842474393cac6dcebb59d61";
@@ -37,7 +38,18 @@
         script.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
         
         script.onload = function() { 
-          console.log("UTMify pixel script loaded successfully"); 
+          console.log("UTMify pixel script loaded successfully");
+          
+          // Force pixel tracking on custom domain
+          if (window.location.hostname === 'mund.growingmen.info') {
+            console.log("Custom domain detected - triggering pixel manually");
+            setTimeout(function() {
+              if (window.utmifyPixel && typeof window.utmifyPixel.track === 'function') {
+                window.utmifyPixel.track('ViewContent');
+                console.log("Manual ViewContent event sent");
+              }
+            }, 1000);
+          }
         };
         
         script.onerror = function(error) { 
