@@ -31,7 +31,7 @@ const VideoPlayer = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="youtube-video-player">
+    <div ref={containerRef} className="youtube-video-player pb-16 md:pb-20">
       {/* O elemento vturb-smartplayer será criado aqui */}
     </div>
   );
