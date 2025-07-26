@@ -20,7 +20,7 @@ const ChannelInfo = () => {
           />
           <div>
             <div className="font-medium text-foreground">Danny Kelly</div>
-            <div className="text-sm text-muted-foreground">1.7M suscriptores</div>
+            <div className="text-sm text-muted-foreground">1.2M suscriptores</div>
           </div>
         </div>
         <Button variant="youtube" size="youtube" className="font-medium">
