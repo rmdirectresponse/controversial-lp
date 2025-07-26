@@ -90,7 +90,25 @@
   
   .youtube-video-player {
     width: 100%;
-    min-height: 400px;
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+  
+  /* VTurb player styling */
+  vturb-smartplayer {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+  
+  /* Remove any extra spacing around the video */
+  .youtube-video-player vturb-smartplayer,
+  .youtube-video-player vturb-smartplayer * {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
   
   .youtube-play-button {
