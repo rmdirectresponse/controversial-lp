@@ -14,9 +14,9 @@ const ChannelInfo = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <img 
-            src={drAngelaTorres} 
+            src="/lovable-uploads/01143b19-89dc-478a-b94c-0f12089171d4.png" 
             alt="Danny Kelly"
-            className="w-10 h-10 object-cover rounded-full"
+            className="w-10 h-10 object-cover object-center rounded-full"
           />
           <div>
             <div className="font-medium text-foreground">Danny Kelly</div>
