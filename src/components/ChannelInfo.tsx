@@ -15,11 +15,11 @@ const ChannelInfo = () => {
         <div className="flex items-center space-x-3">
           <img 
             src={drAngelaTorres} 
-            alt="Dr. Angela Torres"
+            alt="Danny Kelly"
             className="w-10 h-10 object-cover rounded-full"
           />
           <div>
-            <div className="font-medium text-foreground">Dr. Angela Torres</div>
+            <div className="font-medium text-foreground">Danny Kelly</div>
             <div className="text-sm text-muted-foreground">1.7M suscriptores</div>
           </div>
         </div>
