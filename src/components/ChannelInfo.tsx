@@ -7,7 +7,7 @@ const ChannelInfo = () => {
     <div className="space-y-4">
       {/* Video title */}
       <h1 className="text-xl font-normal text-foreground">
-        Esta Receta de Cactus Revierte Tu Diabetes Tipo 2 en 7 Días
+        Descubrí esto al final de mi vida… y ahora necesito contarlo antes de que lo borren.
       </h1>
 
       {/* Channel info and subscribe */}
