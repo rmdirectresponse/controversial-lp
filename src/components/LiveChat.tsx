@@ -100,7 +100,7 @@ const LiveChat = () => {
           <span className="text-xs text-muted-foreground">0/200</span>
         </div>
         <div className="mt-2 text-xs text-muted-foreground text-center">
-          Você precisa estar logado para comentar
+          Necesitas iniciar sesión para comentar
         </div>
       </div>
     </div>
