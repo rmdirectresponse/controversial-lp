@@ -4,49 +4,74 @@ const VideoPlayer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Carregar o script do player
-    const script = document.createElement('script');
-    script.src = 'https://scripts.converteai.net/694efea7-0c09-4e42-b5ff-701bc6a90062/players/68841f5b5e710078faeda02c/v4/player.js';
-    script.async = true;
-    document.body.appendChild(script);
+    let observer: MutationObserver;
 
-    // Monitorar para quando o player for criado e movê-lo para o local correto
-    const checkAndMovePlayer = () => {
-      // Procurar qualquer elemento que contenha "smartplayer" ou elementos relacionados ao VTurb
-      const possiblePlayers = [
-        document.querySelector('#smartplayer-68841f5b5e710078faeda02c'),
-        document.querySelector('[id*="smartplayer"]'),
-        document.querySelector('[class*="smartplayer"]'),
-        document.querySelector('smart-player'),
-        document.querySelector('iframe[src*="converteai"]'),
-        document.querySelector('video[src*="converteai"]')
-      ];
+    // Função para mover qualquer elemento relacionado ao player
+    const movePlayerToContainer = (element: Element) => {
+      if (containerRef.current && element && !containerRef.current.contains(element)) {
+        // Verificar se é um elemento do player VTurb
+        const isPlayerElement = 
+          element.id?.includes('smartplayer') ||
+          element.className?.includes('smartplayer') ||
+          element.tagName?.toLowerCase() === 'smart-player' ||
+          (element as HTMLElement).style?.position === 'fixed' ||
+          (element as HTMLElement).style?.zIndex === '9999' ||
+          element.querySelector('[id*="smartplayer"]') ||
+          element.querySelector('video') ||
+          element.querySelector('iframe');
 
-      for (const player of possiblePlayers) {
-        if (player && containerRef.current && !containerRef.current.contains(player)) {
-          console.log('Movendo player para o local correto:', player);
-          // Remover de onde está
-          player.remove();
-          // Colocar no container correto
-          containerRef.current.appendChild(player);
+        if (isPlayerElement) {
+          console.log('Player detectado, movendo para container:', element);
+          // Resetar estilos que podem estar causando posicionamento incorreto
+          (element as HTMLElement).style.position = 'relative';
+          (element as HTMLElement).style.top = 'auto';
+          (element as HTMLElement).style.left = 'auto';
+          (element as HTMLElement).style.right = 'auto';
+          (element as HTMLElement).style.bottom = 'auto';
+          (element as HTMLElement).style.zIndex = 'auto';
+          (element as HTMLElement).style.transform = 'none';
+          
+          // Mover para o container
+          containerRef.current.appendChild(element);
           return true;
         }
       }
       return false;
     };
 
-    // Tentar mover o player a cada 500ms até encontrar
-    const interval = setInterval(() => {
-      if (checkAndMovePlayer()) {
-        clearInterval(interval);
-      }
-    }, 500);
+    // Configurar MutationObserver para detectar novos elementos
+    if (containerRef.current) {
+      observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === Node.ELEMENT_NODE) {
+              const element = node as Element;
+              movePlayerToContainer(element);
+              
+              // Também verificar elementos filhos
+              const childElements = element.querySelectorAll('*');
+              childElements.forEach(movePlayerToContainer);
+            }
+          });
+        });
+      });
 
-    // Parar de tentar depois de 10 segundos
-    setTimeout(() => clearInterval(interval), 10000);
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
+    }
+
+    // Carregar o script do player
+    const script = document.createElement('script');
+    script.src = 'https://scripts.converteai.net/694efea7-0c09-4e42-b5ff-701bc6a90062/players/68841f5b5e710078faeda02c/v4/player.js';
+    script.async = true;
+    document.body.appendChild(script);
 
     return () => {
-      clearInterval(interval);
+      if (observer) {
+        observer.disconnect();
+      }
     };
   }, []);
 
@@ -57,7 +82,8 @@ const VideoPlayer = () => {
       style={{ 
         width: '100%', 
         minHeight: '400px',
-        background: 'transparent'
+        background: 'transparent',
+        position: 'relative'
       }}
     >
       <div id="smartplayer-68841f5b5e710078faeda02c"></div>
