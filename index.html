@@ -21,17 +21,34 @@
     <link rel="dns-prefetch" href="https://api.vturb.com.br">
 
     <!-- UTMify Pixel -->
-    <script>
-      console.log("UTMify script loading...");
-      window.pixelId = "6842474393cac6dcebb59d61";
-      var a = document.createElement("script");
-      a.setAttribute("async", "");
-      a.setAttribute("defer", "");
-      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-      a.onload = function() { console.log("UTMify pixel loaded successfully"); };
-      a.onerror = function() { console.error("Failed to load UTMify pixel"); };
-      document.head.appendChild(a);
-      console.log("UTMify script element added to head");
+    <script type="text/javascript">
+      (function() {
+        console.log("UTMify initialization starting...");
+        
+        // Set pixel ID
+        window.pixelId = "6842474393cac6dcebb59d61";
+        console.log("Pixel ID set:", window.pixelId);
+        
+        // Create and load script
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.defer = true;
+        script.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+        
+        script.onload = function() { 
+          console.log("UTMify pixel script loaded successfully"); 
+        };
+        
+        script.onerror = function(error) { 
+          console.error("Failed to load UTMify pixel script:", error); 
+        };
+        
+        // Add to head
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(script);
+        console.log("UTMify script added to DOM");
+      })();
     </script>
 
     <meta property="og:title" content="409678d3-bade-4e9e-9b67-5d0cd249f11e" />
