@@ -20,7 +20,7 @@
     <link rel="dns-prefetch" href="https://images.converteai.net">
     <link rel="dns-prefetch" href="https://api.vturb.com.br">
 
-    <!-- UTMify Pixel -->
+    <!-- UTMify Pixel with Facebook Integration -->
     <script type="text/javascript">
       (function() {
         console.log("UTMify initialization starting...");
@@ -30,35 +30,44 @@
         window.pixelId = "6842474393cac6dcebb59d61";
         console.log("Pixel ID set:", window.pixelId);
         
-        // Create and load script
+        // Force UTMify configuration for Facebook Pixel integration
+        window.utmifyConfig = {
+          pixelId: "6842474393cac6dcebb59d61",
+          enableFacebookPixel: true,
+          debug: true
+        };
+        
+        // Create and load script immediately
         var script = document.createElement("script");
         script.type = "text/javascript";
-        script.async = true;
-        script.defer = true;
+        script.async = false; // Load synchronously for better integration
         script.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
         
         script.onload = function() { 
           console.log("UTMify pixel script loaded successfully");
           
-          // Force pixel tracking on custom domain
-          if (window.location.hostname === 'mund.growingmen.info') {
-            console.log("Custom domain detected - triggering pixel manually");
-            setTimeout(function() {
-              if (window.utmifyPixel && typeof window.utmifyPixel.track === 'function') {
-                window.utmifyPixel.track('ViewContent');
-                console.log("Manual ViewContent event sent");
-              }
-            }, 1000);
-          }
+          // Force immediate pixel activation
+          setTimeout(function() {
+            // Trigger ViewContent event
+            if (window.utmify) {
+              window.utmify('track', 'ViewContent');
+              console.log("UTMify ViewContent event triggered");
+            }
+            
+            // Check if Facebook Pixel is active
+            if (window.fbq) {
+              console.log("Facebook Pixel detected via UTMify");
+              window.fbq('track', 'PageView');
+            }
+          }, 500);
         };
         
         script.onerror = function(error) { 
           console.error("Failed to load UTMify pixel script:", error); 
         };
         
-        // Add to head
-        var head = document.getElementsByTagName("head")[0];
-        head.appendChild(script);
+        // Add to head immediately
+        (document.head || document.getElementsByTagName("head")[0]).appendChild(script);
         console.log("UTMify script added to DOM");
       })();
     </script>
