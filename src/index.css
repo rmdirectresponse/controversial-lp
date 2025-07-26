@@ -89,12 +89,8 @@
   }
   
   .youtube-video-player {
-    aspect-ratio: 16 / 9;
-    background: hsl(var(--youtube-bg-tertiary));
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
     width: 100%;
+    min-height: 400px;
   }
   
   .youtube-play-button {
