@@ -19,19 +19,23 @@
     <link rel="dns-prefetch" href="https://scripts.converteai.net">
     <link rel="dns-prefetch" href="https://images.converteai.net">
     <link rel="dns-prefetch" href="https://api.vturb.com.br">
+  </head>
 
-    <!-- UTMify Pixel -->
+  <body>
+    <!-- UTMify Pixel - Moved to body for better execution -->
     <script>
+      console.log("Initializing UTMify pixel...");
       window.pixelId = "6842474393cac6dcebb59d61";
       var a = document.createElement("script");
       a.setAttribute("async", "");
       a.setAttribute("defer", "");
       a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      a.onload = function() { console.log("UTMify pixel loaded successfully"); };
+      a.onerror = function() { console.error("UTMify pixel failed to load"); };
       document.head.appendChild(a);
+      console.log("UTMify pixel script added");
     </script>
-  </head>
-
-  <body>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
