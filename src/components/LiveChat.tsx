@@ -2,44 +2,58 @@ const LiveChat = () => {
   const comments = [
     {
       id: 1,
-      user: "Linda M.",
+      user: "Lucía Gómez",
       avatar: "L",
-      message: "Día 7 y mi azúcar bajó a 97. Honestamente lloré cuando vi el medidor. Gracias, Dra. Angela.",
+      message: "No tengo idea de cómo funciona, pero funciona. Solo digo esto: míralo hasta el final. Después todo tendrá sentido.",
       color: "bg-blue-500"
     },
     {
       id: 2,
-      user: "Carlos Reyes",
-      avatar: "C",
-      message: "Mi papá ha estado usando insulina por 12 años. Después de 2 semanas con esto, su doctor dijo 'No sé qué estás haciendo, pero sigue haciéndolo'.",
+      user: "Javier Morales",
+      avatar: "J",
+      message: "Vi el video pensando que era otra promesa vacía. Pero algo me tocó. Y desde entonces… las cosas simplemente empezaron a cambiar.",
       color: "bg-blue-500"
     },
     {
       id: 3,
-      user: "Deborah W.",
-      avatar: "D",
-      message: "No cambié mi dieta, no empecé a hacer ejercicio. Solo comencé esta receta. Mi energía está regresando. Esto es real.",
+      user: "Camila Ruiz",
+      avatar: "C",
+      message: "No cambié nada en mi rutina. Pero después de ver esto, todo comenzó a fluir. Fue casi inmediato.",
       color: "bg-blue-500"
     },
     {
       id: 4,
-      user: "Samantha R.",
-      avatar: "S",
-      message: "He visto un montón de 'curas' para diabetes en línea. Esta se sintió diferente. Se siente legítima por primera vez.",
+      user: "Carlos Herrera",
+      avatar: "C",
+      message: "Siempre fui escéptico con estas cosas. Pero lo que me pasó esta semana… solo puedo decir que hay algo ahí que no quieren que sepamos.",
       color: "bg-blue-500"
     },
     {
       id: 5,
-      user: "Ben H.",
-      avatar: "B",
-      message: "Bueno... usualmente me salto estos videos largos. Pero vi cada segundo de este. Algo sobre su historia se sintió real.",
+      user: "Isabel Torres",
+      avatar: "I",
+      message: "No suelo comentar en este tipo de videos, pero este me hizo clic. Y desde ese día, todo fue diferente. ¿Casualidad? Lo dudo mucho.",
       color: "bg-blue-500"
     },
     {
       id: 6,
-      user: "Amy Delgado",
-      avatar: "A",
-      message: "No voy a mentir — pensé que esto era una estafa al principio. Pero acabo de hacerlo. Vale la pena intentarlo. Acabo de revertir mi diabetes en menos de 7 días...",
+      user: "Marcelo Díaz",
+      avatar: "M",
+      message: "Estuve a punto de cerrar el video en el primer minuto. Menos mal que lo vi completo. Es raro… pero tiene mucho más sentido que todo lo que había escuchado.",
+      color: "bg-blue-500"
+    },
+    {
+      id: 7,
+      user: "Renata Aguilar",
+      avatar: "R",
+      message: "No se puede explicar. Es algo que solo entiendes cuando lo ves. Me arrepiento de no haberlo visto antes.",
+      color: "bg-blue-500"
+    },
+    {
+      id: 8,
+      user: "Tomás Velázquez",
+      avatar: "T",
+      message: "Pensé que era puro cuento. Pero si estás dudando, míralo. En serio. Es de esas cosas que no puedes \"desver\" después.",
       color: "bg-blue-500"
     }
   ];
