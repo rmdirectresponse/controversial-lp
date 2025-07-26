@@ -28,37 +28,44 @@
         }
 
         :root {
-            /* YouTube Dark Theme Colors */
-            --youtube-bg: hsl(0, 0%, 7%);
-            --youtube-bg-secondary: hsl(0, 0%, 10%);
-            --youtube-bg-tertiary: hsl(0, 0%, 13%);
-            --youtube-text-primary: hsl(0, 0%, 100%);
-            --youtube-text-secondary: hsl(0, 0%, 62%);
-            --youtube-text-muted: hsl(0, 0%, 53%);
-            --youtube-red: hsl(0, 100%, 50%);
-            --youtube-red-hover: hsl(0, 100%, 45%);
-            --youtube-border: hsl(0, 0%, 20%);
-            --youtube-hover: hsl(0, 0%, 15%);
+            /* YouTube Dark Theme Colors - Exact HSL values from Lovable */
+            --youtube-bg: 0 0% 7%;
+            --youtube-bg-secondary: 0 0% 10%;
+            --youtube-bg-tertiary: 0 0% 13%;
+            --youtube-text-primary: 0 0% 100%;
+            --youtube-text-secondary: 0 0% 62%;
+            --youtube-text-muted: 0 0% 53%;
+            --youtube-red: 0 100% 50%;
+            --youtube-red-hover: 0 100% 45%;
+            --youtube-border: 0 0% 20%;
+            --youtube-hover: 0 0% 15%;
             
-            /* Semantic tokens */
+            /* Semantic tokens matching Lovable exactly */
             --background: var(--youtube-bg);
             --foreground: var(--youtube-text-primary);
             --card: var(--youtube-bg-secondary);
             --card-foreground: var(--youtube-text-primary);
+            --popover: var(--youtube-bg-tertiary);
+            --popover-foreground: var(--youtube-text-primary);
+            --primary: var(--youtube-red);
+            --primary-foreground: var(--youtube-text-primary);
             --secondary: var(--youtube-bg-secondary);
             --secondary-foreground: var(--youtube-text-primary);
             --muted: var(--youtube-bg-tertiary);
             --muted-foreground: var(--youtube-text-muted);
             --accent: var(--youtube-hover);
             --accent-foreground: var(--youtube-text-primary);
+            --destructive: var(--youtube-red);
+            --destructive-foreground: var(--youtube-text-primary);
             --border: var(--youtube-border);
-            --primary: var(--youtube-red);
-            --primary-foreground: var(--youtube-text-primary);
+            --input: var(--youtube-bg-tertiary);
+            --ring: var(--youtube-red);
+            --radius: 0.25rem;
         }
 
         body {
-            background-color: var(--background);
-            color: var(--foreground);
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
             font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             width: 100%;
             overflow-x: hidden;
@@ -67,8 +74,8 @@
 
         /* Header */
         .header {
-            background-color: var(--background);
-            border-bottom: 1px solid var(--border);
+            background-color: hsl(var(--background));
+            border-bottom: 1px solid hsl(var(--border));
             position: sticky;
             top: 0;
             z-index: 50;
@@ -112,23 +119,23 @@
 
         .search-input {
             flex: 1;
-            background-color: var(--background);
-            border: 1px solid var(--border);
+            background-color: hsl(var(--background));
+            border: 1px solid hsl(var(--border));
             border-radius: 24px 0 0 24px;
             padding: 8px 16px;
-            color: var(--foreground);
+            color: hsl(var(--foreground));
             outline: none;
             font-size: 16px;
         }
 
         .search-button {
-            background-color: var(--secondary);
-            border: 1px solid var(--border);
+            background-color: hsl(var(--secondary));
+            border: 1px solid hsl(var(--border));
             border-left: none;
             border-radius: 0 24px 24px 0;
             padding: 8px 24px;
             cursor: pointer;
-            color: var(--foreground);
+            color: hsl(var(--foreground));
         }
 
         .icon-button {
@@ -141,18 +148,18 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            color: var(--foreground);
+            color: hsl(var(--foreground));
             transition: background-color 0.2s;
         }
 
         .icon-button:hover {
-            background-color: var(--accent);
+            background-color: hsl(var(--accent));
         }
 
         .youtube-logo {
             font-size: 20px;
             font-weight: 700;
-            color: var(--primary);
+            color: hsl(var(--primary));
         }
 
         /* Main content */
@@ -179,7 +186,7 @@
         .video-title {
             font-size: 20px;
             font-weight: 400;
-            color: var(--foreground);
+            color: hsl(var(--foreground));
             margin: 16px 0;
             line-height: 1.3;
         }
@@ -212,18 +219,18 @@
 
         .channel-name {
             font-weight: 500;
-            color: var(--foreground);
+            color: hsl(var(--foreground));
             font-size: 14px;
         }
 
         .subscriber-count {
             font-size: 12px;
-            color: var(--muted-foreground);
+            color: hsl(var(--muted-foreground));
         }
 
         .subscribe-button {
-            background-color: var(--primary);
-            color: var(--primary-foreground);
+            background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
             border: none;
             border-radius: 18px;
             padding: 10px 16px;
@@ -234,7 +241,7 @@
         }
 
         .subscribe-button:hover {
-            background-color: var(--youtube-red-hover);
+            background-color: hsl(var(--youtube-red-hover));
         }
 
         /* Action buttons */
@@ -247,7 +254,7 @@
 
         .like-dislike-container {
             display: flex;
-            background-color: var(--secondary);
+            background-color: hsl(var(--secondary));
             border-radius: 18px;
             overflow: hidden;
         }
@@ -256,7 +263,7 @@
             background: transparent;
             border: none;
             padding: 10px 16px;
-            color: var(--foreground);
+            color: hsl(var(--foreground));
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -265,20 +272,20 @@
         }
 
         .like-button:hover, .dislike-button:hover {
-            background-color: var(--accent);
+            background-color: hsl(var(--accent));
         }
 
         .divider {
             width: 1px;
             height: 24px;
-            background-color: var(--border);
+            background-color: hsl(var(--border));
             margin: auto 0;
         }
 
         .action-button {
-            background-color: var(--secondary);
-            color: var(--foreground);
-            border: 1px solid var(--border);
+            background-color: hsl(var(--secondary));
+            color: hsl(var(--foreground));
+            border: 1px solid hsl(var(--border));
             border-radius: 18px;
             padding: 10px 16px;
             cursor: pointer;
@@ -290,25 +297,25 @@
         }
 
         .action-button:hover {
-            background-color: var(--accent);
+            background-color: hsl(var(--accent));
         }
 
         /* Live chat */
         .live-chat {
-            background-color: var(--background);
-            border: 1px solid var(--border);
+            background-color: hsl(var(--background));
+            border: 1px solid hsl(var(--border));
             border-radius: 12px;
             height: fit-content;
         }
 
         .chat-header {
             padding: 16px;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid hsl(var(--border));
         }
 
         .chat-title {
             font-weight: 500;
-            color: var(--foreground);
+            color: hsl(var(--foreground));
             font-size: 16px;
         }
 
@@ -317,7 +324,7 @@
             align-items: center;
             margin-top: 4px;
             font-size: 12px;
-            color: var(--muted-foreground);
+            color: hsl(var(--muted-foreground));
         }
 
         .live-indicator {
@@ -361,19 +368,19 @@
         .chat-username {
             font-size: 12px;
             font-weight: 500;
-            color: var(--foreground);
+            color: hsl(var(--foreground));
             margin-bottom: 2px;
         }
 
         .chat-text {
             font-size: 13px;
-            color: var(--foreground);
+            color: hsl(var(--foreground));
             line-height: 1.4;
         }
 
         .chat-input-container {
             padding: 16px;
-            border-top: 1px solid var(--border);
+            border-top: 1px solid hsl(var(--border));
         }
 
         .chat-input-wrapper {
@@ -394,19 +401,19 @@
             flex: 1;
             background: transparent;
             border: none;
-            color: var(--muted-foreground);
+            color: hsl(var(--muted-foreground));
             font-size: 13px;
             outline: none;
         }
 
         .chat-counter {
             font-size: 12px;
-            color: var(--muted-foreground);
+            color: hsl(var(--muted-foreground));
         }
 
         .chat-disabled-message {
             text-align: center;
-            color: var(--muted-foreground);
+            color: hsl(var(--muted-foreground));
             font-size: 12px;
             margin-top: 8px;
         }
@@ -559,7 +566,7 @@
                 <div class="channel-section">
                     <div class="channel-info">
                         <img 
-                            src="https://lovable.app/public/lovable-uploads/01143b19-89dc-478a-b94c-0f12089171d4.png" 
+                            src="/lovable-uploads/01143b19-89dc-478a-b94c-0f12089171d4.png" 
                             alt="Danny Kelly"
                             class="channel-avatar"
                         />
