@@ -7,7 +7,7 @@ const ChannelInfo = () => {
     <div className="space-y-4">
       {/* Video title */}
       <h1 className="text-xl font-normal text-foreground">
-        Descubrí esto al final de mi vida… y ahora necesito contarlo antes de que lo borren.
+        I discovered this at the end of my life… and now I need to tell it before they delete it.
       </h1>
 
       {/* Channel info and subscribe */}
@@ -20,11 +20,11 @@ const ChannelInfo = () => {
           />
           <div>
             <div className="font-medium text-foreground">Danny Kelly</div>
-            <div className="text-sm text-muted-foreground">1.2M suscriptores</div>
+            <div className="text-sm text-muted-foreground">1.2M subscribers</div>
           </div>
         </div>
         <Button variant="youtube" size="youtube" className="font-medium">
-          Suscribirse
+          Subscribe
         </Button>
       </div>
 
@@ -42,12 +42,12 @@ const ChannelInfo = () => {
         
         <Button variant="youtube-secondary" size="youtube" className="font-normal">
           <Share className="w-4 h-4 mr-2" />
-          Compartir
+          Share
         </Button>
         
         <Button variant="youtube-secondary" size="youtube" className="font-normal">
           <Bookmark className="w-4 h-4 mr-2" />
-          Guardar
+          Save
         </Button>
       </div>
     </div>

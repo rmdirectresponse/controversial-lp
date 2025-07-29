@@ -2,58 +2,58 @@ const LiveChat = () => {
   const comments = [
     {
       id: 1,
-      user: "Lucía Gómez",
-      avatar: "L",
-      message: "No tengo idea de cómo funciona, pero funciona. Solo digo esto: míralo hasta el final. Después todo tendrá sentido.",
+      user: "Sarah Johnson",
+      avatar: "S",
+      message: "I have no idea how it works, but it works. I'll just say this: watch it until the end. Everything will make sense after.",
       color: "bg-blue-500"
     },
     {
       id: 2,
-      user: "Javier Morales",
-      avatar: "J",
-      message: "Vi el video pensando que era otra promesa vacía. Pero algo me tocó. Y desde entonces… las cosas simplemente empezaron a cambiar.",
+      user: "Michael Davis",
+      avatar: "M",
+      message: "I watched the video thinking it was another empty promise. But something touched me. And since then... things just started to change.",
       color: "bg-blue-500"
     },
     {
       id: 3,
-      user: "Camila Ruiz",
-      avatar: "C",
-      message: "No cambié nada en mi rutina. Pero después de ver esto, todo comenzó a fluir. Fue casi inmediato.",
+      user: "Jennifer Wilson",
+      avatar: "J",
+      message: "I didn't change anything in my routine. But after watching this, everything started to flow. It was almost immediate.",
       color: "bg-blue-500"
     },
     {
       id: 4,
-      user: "Carlos Herrera",
-      avatar: "C",
-      message: "Siempre fui escéptico con estas cosas. Pero lo que me pasó esta semana… solo puedo decir que hay algo ahí que no quieren que sepamos.",
+      user: "Robert Martinez",
+      avatar: "R",
+      message: "I was always skeptical about these things. But what happened to me this week... I can only say there's something there they don't want us to know.",
       color: "bg-blue-500"
     },
     {
       id: 5,
-      user: "Isabel Torres",
-      avatar: "I",
-      message: "No suelo comentar en este tipo de videos, pero este me hizo clic. Y desde ese día, todo fue diferente. ¿Casualidad? Lo dudo mucho.",
+      user: "Lisa Anderson",
+      avatar: "L",
+      message: "I don't usually comment on these types of videos, but this one clicked for me. And since that day, everything was different. Coincidence? I doubt it.",
       color: "bg-blue-500"
     },
     {
       id: 6,
-      user: "Marcelo Díaz",
-      avatar: "M",
-      message: "Estuve a punto de cerrar el video en el primer minuto. Menos mal que lo vi completo. Es raro… pero tiene mucho más sentido que todo lo que había escuchado.",
+      user: "David Thompson",
+      avatar: "D",
+      message: "I was about to close the video in the first minute. Good thing I watched it completely. It's weird... but it makes much more sense than everything I had heard.",
       color: "bg-blue-500"
     },
     {
       id: 7,
-      user: "Renata Aguilar",
-      avatar: "R",
-      message: "No se puede explicar. Es algo que solo entiendes cuando lo ves. Me arrepiento de no haberlo visto antes.",
+      user: "Amanda Garcia",
+      avatar: "A",
+      message: "It can't be explained. It's something you only understand when you see it. I regret not having seen it before.",
       color: "bg-blue-500"
     },
     {
       id: 8,
-      user: "Tomás Velázquez",
-      avatar: "T",
-      message: "Pensé que era puro cuento. Pero si estás dudando, míralo. En serio. Es de esas cosas que no puedes \"desver\" después.",
+      user: "Christopher Lee",
+      avatar: "C",
+      message: "I thought it was pure nonsense. But if you're doubting, watch it. Seriously. It's one of those things you can't \"unsee\" after.",
       color: "bg-blue-500"
     }
   ];
@@ -62,10 +62,10 @@ const LiveChat = () => {
     <div className="bg-background border border-border rounded">
       {/* Live Chat Header */}
       <div className="border-b border-border p-4">
-        <h3 className="font-medium text-foreground">Chat en Vivo</h3>
+        <h3 className="font-medium text-foreground">Live Chat</h3>
         <div className="flex items-center mt-1 text-sm text-muted-foreground">
           <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
-          <span>Principales</span>
+          <span>Top chat</span>
           <span className="ml-4">👥 2.3K</span>
         </div>
       </div>
@@ -93,14 +93,14 @@ const LiveChat = () => {
           <div className="w-6 h-6 bg-gray-600 rounded-full flex-shrink-0"></div>
           <input
             type="text"
-            placeholder="Haz clic aquí..."
+            placeholder="Say something..."
             className="flex-1 bg-transparent text-sm text-muted-foreground placeholder:text-muted-foreground focus:outline-none"
             disabled
           />
           <span className="text-xs text-muted-foreground">0/200</span>
         </div>
         <div className="mt-2 text-xs text-muted-foreground text-center">
-          Necesitas iniciar sesión para comentar
+          Sign in to chat
         </div>
       </div>
     </div>
