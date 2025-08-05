@@ -90,12 +90,11 @@
   
   .youtube-video-player {
     width: 100%;
-    margin: 0;
-    padding: 0;
-    background: transparent;
+    margin-top: 16px;
+    margin-bottom: 0;
   }
   
-  /* VTurb player styling */
+  /* VTurb player styling - fix black bars */
   vturb-smartplayer {
     display: block !important;
     width: 100% !important;
@@ -103,6 +102,21 @@
     margin: 0 !important;
     padding: 0 !important;
     background: transparent !important;
+    overflow: hidden !important;
+  }
+  
+  /* Remove black bars from VTurb player */
+  vturb-smartplayer iframe,
+  vturb-smartplayer video {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    background: transparent !important;
+  }
+  
+  /* Ensure proper aspect ratio */
+  .youtube-video-player vturb-smartplayer {
+    aspect-ratio: 16/9 !important;
   }
   
   .youtube-play-button {
