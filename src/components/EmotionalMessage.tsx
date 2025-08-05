@@ -3,25 +3,25 @@ const EmotionalMessage = () => {
     <div className="bg-secondary border border-border rounded-lg p-6 mt-6">
       <div className="space-y-4 text-foreground leading-relaxed">
         <p>
-          They knew. For over a decade, they knew.
+          Ellos sabían. Por más de una década, sabían.
         </p>
         <p>
-          A simple cactus recipe that could reverse type 2 diabetes in as little as 7 days — and they buried it. Why? Because it works. And if it works, they don't profit.
+          Una simple receta de cactus que podría revertir la diabetes tipo 2 en tan solo 7 días — y la enterraron. ¿Por qué? Porque funciona. Y si funciona, ellos no ganan.
         </p>
         <p>
-          This video was already taken down twice. The truth you're about to see is being silenced — by the same billion-dollar industry that makes you believe diabetes is "forever."
+          Este video ya fue eliminado dos veces. La verdad que estás a punto de ver está siendo silenciada — por la misma industria de miles de millones que te hace creer que la diabetes es "para siempre."
         </p>
         <p>
-          Forget the sugar. Forget the genes. The real cause hides in your liver — and this cactus trick flushes it out naturally.
+          Olvídate del azúcar. Olvídate de los genes. La verdadera causa se esconde en tu hígado — y este truco del cactus la elimina de forma natural.
         </p>
         <p>
-          It's not magic. It's not a trend. It's science that was buried to keep you dependent.
+          No es magia. No es una moda. Es ciencia que fue enterrada para mantenerte dependiente.
         </p>
         <p>
-          If you or someone you love struggles with type 2 diabetes... you need to see this.
+          Si tú o alguien que amas lucha con diabetes tipo 2... necesitas ver esto.
         </p>
         <p className="font-medium">
-          Watch it now. Save it. Share it. Because this might be the last time it appears online.
+          Míralo ahora. Guárdalo. Compártelo. Porque esta podría ser la última vez que aparezca en línea.
         </p>
       </div>
     </div>
