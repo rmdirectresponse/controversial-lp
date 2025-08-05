@@ -8,10 +8,10 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <YouTubeHeader />
       
-      <main className="youtube-container py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <main className="youtube-container py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
           {/* Main content area */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-0">
             <VideoPlayer />
             <ChannelInfo />
             
