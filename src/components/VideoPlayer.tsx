@@ -9,10 +9,8 @@ const VideoPlayer = () => {
       const vTurbElement = document.createElement("vturb-smartplayer");
       vTurbElement.id = "vid-68925bc9e69e8e799c274d3e";
       vTurbElement.style.display = "block";
+      vTurbElement.style.margin = "0 auto";
       vTurbElement.style.width = "100%";
-      vTurbElement.style.margin = "0";
-      vTurbElement.style.padding = "0";
-      vTurbElement.style.backgroundColor = "transparent";
       
       containerRef.current.appendChild(vTurbElement);
 
@@ -33,7 +31,7 @@ const VideoPlayer = () => {
   }, []);
 
   return (
-    <div ref={containerRef} style={{ margin: 0, padding: 0, backgroundColor: 'transparent' }}>
+    <div ref={containerRef} className="youtube-video-player">
       {/* O elemento vturb-smartplayer será criado aqui */}
     </div>
   );
