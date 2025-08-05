@@ -6,8 +6,6 @@ import LiveChat from "@/components/LiveChat";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <YouTubeHeader />
-      
       <main className="youtube-container py-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main content area */}
