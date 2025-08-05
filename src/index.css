@@ -94,14 +94,6 @@
     margin-bottom: 0;
   }
   
-  /* VTurb player styling - minimal interference */
-  vturb-smartplayer {
-    display: block !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
   .youtube-play-button {
     position: absolute;
     top: 50%;

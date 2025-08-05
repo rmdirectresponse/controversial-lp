@@ -10,9 +10,6 @@ const VideoPlayer = () => {
       // Criar o elemento vturb-smartplayer
       const vTurbElement = document.createElement("vturb-smartplayer");
       vTurbElement.id = "vid-68925bc9e69e8e799c274d3e";
-      vTurbElement.style.display = "block";
-      vTurbElement.style.margin = "0 auto";
-      vTurbElement.style.width = "100%";
       
       console.log('Criando elemento VTurb:', vTurbElement.id);
       
