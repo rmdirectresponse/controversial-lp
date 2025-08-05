@@ -19,9 +19,9 @@ const ChannelInfo = () => {
             className="w-10 h-10 object-cover object-center rounded-full"
           />
           <div>
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-2">
               <span className="font-medium text-foreground">Danny Kelly</span>
-              <CheckCircle className="w-4 h-4 text-muted-foreground" fill="currentColor" />
+              <CheckCircle className="w-4 h-4 text-blue-500" fill="currentColor" />
             </div>
             <div className="text-sm text-muted-foreground">3,27 mi</div>
           </div>
