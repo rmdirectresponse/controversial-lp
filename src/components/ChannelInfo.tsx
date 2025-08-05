@@ -20,7 +20,6 @@ const ChannelInfo = () => {
           />
           <div>
             <div className="font-medium text-foreground">Danny Kelly</div>
-            <div className="text-sm text-muted-foreground">3,27 mi</div>
           </div>
         </div>
         <Button variant="youtube" size="youtube" className="font-medium">
