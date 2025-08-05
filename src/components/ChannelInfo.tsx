@@ -31,22 +31,22 @@ const ChannelInfo = () => {
       {/* Action buttons */}
       <div className="flex items-center space-x-2 flex-wrap gap-2">
         <div className="flex items-center bg-secondary rounded-full">
-          <Button variant="ghost" size="sm" className="rounded-l-full rounded-r-none hover:bg-accent">
-            <ThumbsUp className="w-4 h-4 mr-2" />
+          <Button variant="ghost" size="sm" className="rounded-l-full rounded-r-none hover:bg-accent px-2 py-1 h-8">
+            <ThumbsUp className="w-3.5 h-3.5 mr-1" />
           </Button>
           <div className="w-px h-6 bg-border"></div>
-          <Button variant="ghost" size="sm" className="rounded-r-full rounded-l-none hover:bg-accent">
-            <ThumbsDown className="w-4 h-4" />
+          <Button variant="ghost" size="sm" className="rounded-r-full rounded-l-none hover:bg-accent px-2 py-1 h-8">
+            <ThumbsDown className="w-3.5 h-3.5" />
           </Button>
         </div>
         
-        <Button variant="youtube-secondary" size="youtube" className="font-normal">
-          <Share className="w-4 h-4 mr-2" />
+        <Button variant="youtube-secondary" size="sm" className="font-normal h-8 px-3">
+          <Share className="w-3.5 h-3.5 mr-1.5" />
           Compartir
         </Button>
         
-        <Button variant="youtube-secondary" size="youtube" className="font-normal">
-          <Bookmark className="w-4 h-4 mr-2" />
+        <Button variant="youtube-secondary" size="sm" className="font-normal h-8 px-3">
+          <Bookmark className="w-3.5 h-3.5 mr-1.5" />
           Guardar
         </Button>
       </div>
