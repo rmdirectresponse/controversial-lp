@@ -90,8 +90,9 @@
   
   .youtube-video-player {
     width: 100%;
-    margin-top: 16px;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
   }
   
   /* VTurb player styling */
@@ -102,13 +103,6 @@
     margin: 0 !important;
     padding: 0 !important;
     background: transparent !important;
-  }
-  
-  /* Remove any extra spacing around the video */
-  .youtube-video-player vturb-smartplayer,
-  .youtube-video-player vturb-smartplayer * {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
   }
   
   .youtube-play-button {
