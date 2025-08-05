@@ -66,7 +66,6 @@ const LiveChat = () => {
         <div className="flex items-center mt-1 text-sm text-muted-foreground">
           <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
           <span>Chat principal</span>
-          <span className="ml-4">👥 2,3 mil</span>
         </div>
       </div>
 
