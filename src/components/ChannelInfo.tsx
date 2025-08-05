@@ -33,7 +33,7 @@ const ChannelInfo = () => {
         <div className="flex items-center bg-secondary rounded-full">
           <Button variant="ghost" size="sm" className="rounded-l-full rounded-r-none hover:bg-accent px-3 py-2 h-9">
             <ThumbsUp className="w-4 h-4 mr-2" />
-            543,3 mil
+            58 mil
           </Button>
           <div className="w-px h-6 bg-border"></div>
           <Button variant="ghost" size="sm" className="rounded-r-full rounded-l-none hover:bg-accent px-3 py-2 h-9">
