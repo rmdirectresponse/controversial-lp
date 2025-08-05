@@ -41,12 +41,12 @@ const ChannelInfo = () => {
           </Button>
         </div>
         
-        <Button variant="youtube-secondary" size="sm" className="font-normal h-9 px-4">
+        <Button variant="youtube-secondary" size="sm" className="font-normal h-9 px-3 rounded-full">
           <Share className="w-4 h-4 mr-2" />
           Compartilhar
         </Button>
         
-        <Button variant="youtube-secondary" size="sm" className="font-normal h-9 px-4">
+        <Button variant="youtube-secondary" size="sm" className="font-normal h-9 px-3 rounded-full">
           <Bookmark className="w-4 h-4 mr-2" />
           Salvar
         </Button>
