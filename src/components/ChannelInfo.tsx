@@ -5,15 +5,10 @@ import drAngelaTorres from "@/assets/dr-angela-torres.jpg";
 const ChannelInfo = () => {
   return (
     <div className="space-y-4">
-      {/* Video metadata */}
-      <div className="space-y-2">
-        <h1 className="text-xl font-normal text-foreground">
-          Descubrí esto al final de mi vida… y ahora necesito contarlo antes de que lo eliminen.
-        </h1>
-        <div className="text-sm text-muted-foreground">
-          819 mil visualizações • há 5 anos
-        </div>
-      </div>
+      {/* Video title */}
+      <h1 className="text-xl font-normal text-foreground">
+        Descubrí esto al final de mi vida… y ahora necesito contarlo antes de que lo eliminen.
+      </h1>
 
       {/* Channel info and subscribe */}
       <div className="flex items-center justify-between">
@@ -25,7 +20,7 @@ const ChannelInfo = () => {
           />
           <div>
             <div className="flex items-center space-x-1">
-              <span className="font-medium text-foreground">Dan</span>
+              <span className="font-medium text-foreground">Danny Kelly</span>
               <CheckCircle className="w-4 h-4 text-muted-foreground" fill="currentColor" />
             </div>
             <div className="text-sm text-muted-foreground">3,27 mi</div>
