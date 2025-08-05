@@ -5,16 +5,19 @@ import LiveChat from "@/components/LiveChat";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background">
       <YouTubeHeader />
+      
+      {/* Video Player - Full width at top */}
+      <div className="w-full pt-5">
+        <VideoPlayer />
+      </div>
       
       <main className="youtube-container py-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Main content area */}
           <div className="lg:col-span-2 space-y-4">
-            <VideoPlayer />
             <ChannelInfo />
-            
           </div>
           
           {/* Sidebar */}
