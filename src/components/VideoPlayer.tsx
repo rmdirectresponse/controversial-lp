@@ -35,10 +35,14 @@ const VideoPlayer = () => {
     }
 
     return () => {
-      // Cleanup
+      // Cleanup - remover script antigo e novo
       const existingScript = document.querySelector(`script[src*="68841f5b5e710078faeda02c"]`);
+      const oldScript = document.querySelector(`script[src*="68925bc9e69e8e799c274d3e"]`);
       if (existingScript) {
         existingScript.remove();
+      }
+      if (oldScript) {
+        oldScript.remove();
       }
     };
   }, []);
